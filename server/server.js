@@ -8,8 +8,8 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const Recipe = require('./recipe');
 const User = require('./user');
-const Meal = require('./meals');
-const authMiddleware = require('./auth');
+const Meal = require('./Meal');
+const auth = require('./middleware/auth');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -111,7 +111,7 @@ app.post('/api/logout', (req, res) => {
 });
 
 // Protected Route (for testing authentication)
-app.get('/api/protected-route', authMiddleware, (req, res) => {
+app.get('/api/protected-route', auth, (req, res) => {
   res.json({ message: 'Authenticated', user: req.user });
 });
 
@@ -149,7 +149,7 @@ app.get('/api/recipes', async (req, res) => {
 });
 
 // Log a Meal
-app.post('/api/meals', authMiddleware, async (req, res) => {
+app.post('/api/meals', auth, async (req, res) => {
   const { mealName, calories, protein, carbs, fat } = req.body;
 
   if (!mealName || !calories || !protein || !carbs || !fat) {
@@ -174,17 +174,15 @@ app.post('/api/meals', authMiddleware, async (req, res) => {
 });
 
 // Fetch Meals for Authenticated User
-router.get('/api/meals', auth, async (req, res) => {
+app.get('/api/meals', auth, async (req, res) => {
   try {
-    // Fetch meals associated with the logged-in user
-    const meals = await Meal.find({ userId: req.user.id }).sort({ createdAt: -1 }); // Sort by createdAt descending
+    const meals = await Meal.find({ userId: req.user.id }).sort({ createdAt: 1 }); // Ascending order
     res.json(meals);
   } catch (error) {
     console.error('Error fetching meals:', error);
     res.status(500).json({ message: 'Error fetching meals' });
   }
 });
-
 
 // Start the Server
 app.listen(PORT, () => {
