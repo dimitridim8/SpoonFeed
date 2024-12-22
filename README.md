@@ -12,7 +12,7 @@ node server.js <br />
 to run frontend: <br />
 cd /client/src/ <br />
 npm install <br />
-cd .. <br />
+cd ../ <br />
 cd src <br />
 npm start <br />
 
