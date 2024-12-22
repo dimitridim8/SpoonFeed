@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SpoonFeed/static/css/main.f107a1b8.css",
+    "main.js": "/SpoonFeed/static/js/main.4b00c36a.js",
+    "static/js/453.419a5d54.chunk.js": "/SpoonFeed/static/js/453.419a5d54.chunk.js",
+    "index.html": "/SpoonFeed/index.html",
+    "main.f107a1b8.css.map": "/SpoonFeed/static/css/main.f107a1b8.css.map",
+    "main.4b00c36a.js.map": "/SpoonFeed/static/js/main.4b00c36a.js.map",
+    "453.419a5d54.chunk.js.map": "/SpoonFeed/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f107a1b8.css",
+    "static/js/main.4b00c36a.js"
+  ]
+}
