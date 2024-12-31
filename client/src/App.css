@@ -1,0 +1,93 @@
+/* Main container styling for the application */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Centered welcome heading */
+.app-heading {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Background and layout for the application */
+.App-header {
+  background-color: #f8f9fa; /* Light background for contrast */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  padding-top: 40px;
+}
+
+/* Link styling for any additional links */
+.App-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  color: #0056b3;
+}
+
+.log-meal-button {
+  display: inline-block;
+  background-color: #cc00ff; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Add padding */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 5px; /* Add rounded corners */
+  margin: 0 5px; /* Add space between buttons */
+  text-align: center; /* Center the text */
+}
+
+.log-meal-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #cc00ff; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Add padding */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 5px; /* Add rounded corners */
+  margin: 0 5px; /* Add space between buttons */
+  text-align: center; /* Center the text */
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .app-heading {
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+
+  .App {
+    padding: 10px;
+  }
+
+  .App-header {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-heading {
+    font-size: 1.8rem;
+  }
+
+  .App {
+    padding: 5px;
+  }
+}
